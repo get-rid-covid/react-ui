@@ -1,0 +1,27 @@
+.Button{
+    padding:3px;
+    outline: none;
+    cursor:pointer;
+    margin:10px;
+    font-weight:bold;
+    /* background-color: transparent; */
+}
+
+
+.Success{
+    background-color: #00cc66;
+}
+
+.Danger{
+    background-color: #ff5050;
+}
+
+.Primary{
+    background-color:#0073e6;
+}
+
+
+
+.Button:disabled{
+    background-color:grey
+}

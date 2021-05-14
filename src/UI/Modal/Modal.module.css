@@ -1,0 +1,15 @@
+.Modal{
+    width:70%;
+    top : 15%;
+    left:15%;
+    padding:15px;
+    
+    z-index: 500;
+    background-color:#dfdfdf;
+    position:fixed;
+    color:black;
+    border:1px solid #313131;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px black;
+    overflow-y:scroll;
+}

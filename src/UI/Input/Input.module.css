@@ -1,0 +1,12 @@
+.InputElement {
+   color:white;
+   user-select: text;
+   -webkit-user-select:text;
+     
+}
+
+.Invalid{
+    border:red;
+    background-color: salmon;
+
+}
