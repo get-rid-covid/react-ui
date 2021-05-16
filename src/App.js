@@ -5,6 +5,7 @@ import {Route,Switch} from 'react-router-dom'
 import HomeBuilder from './container/HomeContainer/HomeBuilder'
 import PlanBuilder from './container/PlanContainer/PlanBuilder'
 import * as linkLabel from './utils/Constants/routeLinks'
+import OxygenContainer from './container/OxygenBase/OxygenContainer';
 
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
         
         <Route path={linkLabel.FEEDBACK} component={PlanBuilder}/>
         <Route path={linkLabel.HOME_LINK} exact component={HomeBuilder}/>
+        <Route path={linkLabel.OXYGEN} component={OxygenContainer}/>
       </Switch>
     )
     return (

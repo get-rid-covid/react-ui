@@ -15,6 +15,7 @@ const firebaseConfig = {
   export const db = firebase.firestore();
   export const orgCollection = db.collection('organisationList');
   export const plasmaDonarCollection =db.collection('plasmaDonarsList');
+  export const oxygenDealerCollection=db.collection('oxygenDealersList');
   export const plasmaRequestCollection =db.collection('plasmaRequesterList');
   export const feedbackCollections =db.collection('feedbacks');
   export const deactivateCollections =db.collection('deactivedRequests');

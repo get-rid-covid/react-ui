@@ -11,6 +11,7 @@ export const ADDRESS = 'Address';
 export const PINCODE = 'PinCode';
 export const EMAIL = 'Email';
 export const PLASMA_HOME = 'Blood Plasma';
+export const OXYGEN="Oxygen Portal"
 
 export const BLOOD_GROUP = 'Blood Group'
 export const TEST_POS_DATE ='Tested Positive On'

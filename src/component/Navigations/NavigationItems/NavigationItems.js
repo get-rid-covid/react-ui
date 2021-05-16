@@ -9,6 +9,9 @@ const navigationItems = (props) =>{
         <ul className={classes.NavigationItems}>
             <NavigationItem link={navi.HOME_LINK} exact name ={labi.PLASMA_HOME}></NavigationItem>
             <NavigationItem link={navi.FEEDBACK} name ={labi.FEEDBACK}></NavigationItem>
+            <NavigationItem link={navi.OXYGEN} name ={labi.OXYGEN}></NavigationItem>
+
+
         </ul>
     )
 }

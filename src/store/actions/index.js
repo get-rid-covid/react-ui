@@ -5,7 +5,15 @@ export {initSavePlasmaDonar,fetchDonarData,
     onCloseDonarForm,
     closeInfoModal,
     onClickFilter,
-    onCloseFilter} from './plasmaDonarsActions'
+    onCloseFilter} from './plasmaDonarsActions';
+    export {initSaveOxygenDealer,fetchDealerData,
+        onClickDealerForm,
+        onCloseDealerForm,
+        closeInfoModal,
+        onClickFilter,
+        onCloseFilter} from './oxygenContainerActions';
+
+
 
 export {initSavePlasmaRequest,fetchPlasmaReq,onClickReqForm,onCloseReqForm,closeReqInfoModal} from './plasmaRequestAction'
 
