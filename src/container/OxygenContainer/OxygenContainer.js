@@ -113,8 +113,8 @@ class OxygenContainer extends Component {
             <OxygenHandlerButton clickDealer={this.openDealerPopup} clickRequest={this.openRequestPopup} clickDeactivate={this.openDeactivatePopup} />
             <div className={classes.toggleClass}>
                     <div className={["btn-group", classes.externaBtnClass].join(' ')} data-toggle="button" role="group" aria-label="Basic example">
-                    <button type="button"  className={this.state.isDonar ? "btn btn-primary" : "btn btn-secondary"} onClick={this.toggleDealerHandler} > Donors</button>
-                    <button type="button" className={this.state.isDonar ? "btn btn-secondary" : "btn btn-primary"} onClick={this.toggleDealerHandler}>Requests</button>
+                    <button type="button"  className={this.state.isDealer ? "btn btn-primary" : "btn btn-secondary"} onClick={this.toggleDealerHandler} > Dealers</button>
+                    <button type="button" className={this.state.isDealer ? "btn btn-secondary" : "btn btn-primary"} onClick={this.toggleDealerHandler}>Requests</button>
                     </div>
                     <div className={classes.filterClass}>
                         <button className='btn btn-info' onClick={this.openFilterForm}>filter</button>

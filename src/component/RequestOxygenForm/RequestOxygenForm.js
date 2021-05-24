@@ -231,6 +231,7 @@ changeHandler = (event,updatedKey) =>{
         requestForm : updatedForm,
         canformSubmit:formValid
     })
+    console.log(this.state.canformSubmit);
 
 }
 onSelectTermCondition = (event) =>{
