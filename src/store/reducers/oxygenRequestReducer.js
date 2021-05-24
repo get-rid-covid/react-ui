@@ -28,7 +28,7 @@ const onOpenForm = (state,action) =>{
     return updateState(state,{loading:true,error:null});
  }
  const onFetchOxygenReq = (state,action) =>{
-    return updateState(state,{loading:false, plasmaRequestList:action.plasmaReqDetails, error:null});
+    return updateState(state,{loading:false, oxygenRequestList:action.oxygenReqDetails, error:null});
  }
  
  const errorFetchOxygenReq = (state,action) =>{

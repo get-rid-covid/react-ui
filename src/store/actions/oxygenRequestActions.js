@@ -30,6 +30,7 @@ export const onClickOxygenReqForm = () =>{
                     phoneNumber: parseInt(details.phoneNumber),
                     createdTime:createdTime()
                 }).then(snapshot=>{
+                    console.log(snapshot);
                     dispatch(onSaveOxygenDealerReq(snapshot.id));
                     dispatch(fetchOxygenReq({}))
                 }).catch(error =>{
@@ -106,7 +107,9 @@ export const onSaveOxygenDealerReq = (id) =>{
         query = query.where('dataPrivacy', '==', 1); */
         eval(query).get()
         .then(snapShot =>{
+
             const details = firebaseLooper(snapShot);
+            console.log("bundles"+details);
             dispatch(onFetchOxygenReq(details))
         })
         .catch(error=>{
