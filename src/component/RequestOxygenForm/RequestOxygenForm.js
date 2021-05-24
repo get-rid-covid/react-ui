@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import * as labi from '../../utils/Constants/EnglishLabels'
 import InputElement from '../../UI/Input/Input'
-import classes from './RequestPlasmaForm.module.css'
+import classes from './RequestOxygenForm.module.css'
 import  {validator} from '../../utils/Validator/Validator'
 import Button from '../../UI/Button/Button'
 import * as orgAction from '../../store/actions/index'
@@ -12,7 +12,7 @@ import * as BloodGroup from '../../utils/Constants/BloodGroup'
 import {getCountryStateData,getDistrictsData} from '../../utils/updateData/stateDistrictModel'
 import * as placeData  from '../../utils/updateData/stateDistrictModel'
 
-class oxygenRequestForm extends Component{
+class OxygenRequestForm extends Component{
 
 state = {
     requestForm:{
@@ -79,20 +79,21 @@ state = {
             isValid:true,
             touched:false
         },
-        numberOfConcentrators:{
-            elementType: 'input',
-            value: '',
-            labelValue:labi.BLOOD_GROUP,
+        oxygenQuantity:{
+            elementType:'input',
+            value:'',
+            labelValue:labi.AGE,
             colSize:'col-md-6',
-            elementConfig: {
-               placeholder:'Quantity'
+            elementConfig:{
+                placeholder:'Oxygen Quantity'
             },
-            touched:false,
-            isValid:false,
-            validation:{
-                required:true,
-                pattern:'^(0|[1-9][0-9]*)$'
-            }    
+            validation: {
+                pattern:'^(0|[1-9][0-9]*)$',
+                maxLength:2,
+                minLength:2
+            },
+            isValid:true,
+            touched:false
         },
         
 
@@ -239,6 +240,7 @@ onSelectTermCondition = (event) =>{
                 isTermCondition : !prevState.isTermCondition
             }
         })
+        console.log(this.state);
 }
 openTNCModel = (event) =>{
     this.setState(prevState =>
@@ -247,6 +249,7 @@ openTNCModel = (event) =>{
             doOpenTNCModel : !prevState.doOpenTNCModel
         }
     })
+    console.log(this.state);
 }
 submitIntialDetailsHandler = (event) =>{
     event.preventDefault();
@@ -306,7 +309,7 @@ render() {
         <div className="form-check form-check-inline">
                 <input type='checkbox'  className='form-check-input' id='termsCondition' value={this.state.isTermCondition} onChange ={this.onSelectTermCondition}/>
                 <label className= "form-check-label" htmlFor='termsCondition'>
-                    agree to <strong style={{display:'inline'}} onClick={this.openTNCModel}> Terms and Condition</strong>
+                    Agree to <strong style={{display:'inline'}} onClick={this.openTNCModel}> Terms and Condition</strong>
             
                 </label>
         </div>
@@ -328,16 +331,16 @@ render() {
 
 const mapStatesToProps  = (state) =>{
     return{
-        loading:state.oxygenReqReducer.loading,
-        infoModel:state.oxygenReqReducer.infoModel,
-        infoMessage:state.oxygenReqReducer.infoMessage
+        loading:state.oxygenRequestReducer.loading,
+        infoModel:state.oxygenRequestReducer.infoModel,
+        infoMessage:state.oxygenRequestReducer.infoMessage
     }
 }
 const mapDispatchToProps = (dispatch) =>{
     return {
         onSubmitRequestForm : (details) => dispatch(orgAction.initSaveOxygenRequest(details)),
-        closeInfoModal : () => dispatch( orgAction.closeReqInfoModal())
+        closeInfoModal : () => dispatch( orgAction.onCloseOxygenReqForm())
     }
 }
 
-export default connect(mapStatesToProps,mapDispatchToProps)(oxygenRequestForm);
+export default connect(mapStatesToProps,mapDispatchToProps)(OxygenRequestForm);

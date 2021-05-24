@@ -7,8 +7,7 @@ import moment from 'moment'
 export const initSavePlasmaRequest = (details)=>{
     return dispatch =>{
         dispatch(startSavePlasmaReq())
-        plasmaRequestCollection.
-        where('phoneNumber', '==',parseInt(details.phoneNumber))
+        plasmaRequestCollection.where('phoneNumber', '==',parseInt(details.phoneNumber))
         .get().then(snapShot =>{
             const dett = firebaseLooper(snapShot);
             if(dett.length==0){

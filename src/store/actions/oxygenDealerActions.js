@@ -1,8 +1,8 @@
-import {oxygenDealerCollection,createdTime} from '../../FirebaseDb/firebase';
-import * as actionTypes from '../../utils/Constants/actionTypes'
-import * as labi from '../../utils/Constants/EnglishLabels'
-import moment from 'moment'
+import * as actionTypes from '../../utils/Constants/actionTypes';
+import {oxygenDealerCollection,createdTime} from '../../FirebaseDb/firebase'
 import {firebaseLooper} from '../../utils/updateData/updateState'
+import moment from 'moment'
+import * as labi from '../../utils/Constants/EnglishLabels'
 
 export const initSaveOxygenDealer = (details)=>{
     return dispatch =>{
@@ -16,64 +16,33 @@ export const initSaveOxygenDealer = (details)=>{
                         ...details,
                         age:parseInt(details.age),
                         dataPrivacy:parseInt(details.dataPrivacy),
-                        oxygen_concentrators:parseInt(details.oxygenConcentrators),
                         pincode:parseInt(details.pincode),
+                        oxygenCapacity:parseInt(details.oxygen_capacity),
                         phoneNumber: parseInt(details.phoneNumber),
                         createdTime:createdTime()
                     }).then(snapshot=>{
                         dispatch(onSaveOxygenDealer(snapshot.id))
                         dispatch(fetchDealerData({}));
                     }).catch(error =>{
-                        dispatch(errorSaveDealer(error))
+                        dispatch(errorSaveOxygen(error))
                     }) 
             }
             else{
                 dispatch(phoneNumExits(dett[0].phoneNumber))
             }   
         }).catch(err =>{
-            dispatch(errorSavePlasma(err))
+            dispatch(errorSaveOxygen(err))
         })
         
     }
 }
 
-export const phoneNumExits = (number) =>{
-    return{
-        type:actionTypes.PHONE_NUMBER_EXITS,
-        phoneNumber:number
-    }
-}
-
-export const closeInfoModal = () =>{
-    return{
-        type:actionTypes.CLOSE_INFO_MODAL
-    }
-}
-
-export const onSaveOxygenDealer = (id) =>{
-    return{
-     type:actionTypes.ON_SAVE_OXYGEN,
-     id:id,
-     infoMessage: labi.SUCCESS_MSG
-    }
- }
-
- export const onClickFilter = () =>{
-    return{
-        type:actionTypes.OPEN_FILTER
-    } 
- }
-//CLOSE_FILTER
-export const onCloseFilter = () =>{
-    return{
-        type:actionTypes.CLOSE_FILTER
-    } 
- }
- export const onClickDealerForm = () =>{
+export const onClickDealerForm = () =>{
     return{
      type:actionTypes.ON_CLICK_DEALER_MODAL
     }
  }
+
  export const onCloseDealerForm = () =>{
     return{
      type:actionTypes.ON_CLOSE_DEALER_MODAL
@@ -85,10 +54,18 @@ export const onCloseFilter = () =>{
      type:actionTypes.START_SAVE_OXYGEN
     }
  }
- export const errorSaveOxygen = (error) =>{
+
+ export const phoneNumExits = (number) =>{
     return{
-     type:actionTypes.ERROR_SAVE_OXYGEN,
-     error:error
+        type:actionTypes.PHONE_NUMBER_EXITS,
+        phoneNumber:number
+    }
+}
+export const onSaveOxygenDealer = (id) =>{
+    return{
+     type:actionTypes.ON_SAVE_OXYGEN,
+     id:id,
+     infoMessage: labi.SUCCESS_MSG
     }
  }
 
@@ -102,7 +79,7 @@ export const onCloseFilter = () =>{
         arr.push(`queries.where('dataPrivacy','==',1)`)
         
         if(!(Object.keys(filterData).length === 0 && filterData.constructor === Object)){
-           
+            
             if(filterData.state){
                 arr.push(`where("state","==",'${filterData.state}')`)    
             }
@@ -131,21 +108,44 @@ export const onCloseFilter = () =>{
 
 }
 
-export const onFetchDealerData = (details) =>{
-    return{
-         type:actionTypes.ON_FETCH_OXYGEN,
-          donarDetails:details  
-    }
-}
-
 export const startFetchOxygen = () =>{
     return{
      type:actionTypes.START_FETCH_OXYGEN
     }
  }
+
  export const errorFetchOxygen = (error) =>{
     return{
      type:actionTypes.ERROR_FETCH_OXYGEN,
      error:error
     }
  }
+
+ export const errorSaveOxygen = (error) =>{
+    return{
+     type:actionTypes.ERROR_SAVE_OXYGEN,
+     error:error
+    }
+ }
+ export const onFetchDealerData = (details) =>{
+    return{
+         type:actionTypes.ON_FETCH_OXYGEN,
+          dealerDetails:details  
+    }
+}
+export const onClickOxygenFilter = () =>{
+    return{
+        type:actionTypes.OPEN_OXYGEN_FILTER
+    } 
+ }
+//CLOSE_FILTER
+export const onCloseOxygenFilter = () =>{
+    return{
+        type:actionTypes.CLOSE_OXYGEN_FILTER
+    } 
+ }
+ export const closeOxygenInfoModal = () =>{
+    return{
+        type:actionTypes.CLOSE_OXYGEN_INFO_MODAL
+    }
+}

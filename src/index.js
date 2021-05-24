@@ -13,18 +13,16 @@ import firebase from './FirebaseDb/firebase'
 import plasmaDonarReducer from './store/reducers/plasmaDetailsReducer'
 import plasmaReqReducer from './store/reducers/plasmaRequestReducer'
 import feedbackReducer from './store/reducers/feedbackReducer'
-import oxygenContainerReducer from './store/reducers/oxygenContainerReducer'
-import oxygenReqReducer from './store/reducers/oxygenReqReducer';
+import oxygenDetailReducer from './store/reducers/oxygenDetailReducer'
+import oxygenRequestReducer from './store/reducers/oxygenRequestReducer'
 
 const rootReducer  = combineReducers({
   orgReducer : orgReducer,
   plasmaReqReducer : plasmaReqReducer,
   plasmaDonarReducer: plasmaDonarReducer,
-  oxygenContainerReducer:oxygenContainerReducer,
-  oxygenReqReducer:oxygenReqReducer,
   feedbackReducer:feedbackReducer,
-  
-
+  oxygenDetailReducer:oxygenDetailReducer,
+  oxygenRequestReducer:oxygenRequestReducer
 })
 
 const  componseEnchacer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

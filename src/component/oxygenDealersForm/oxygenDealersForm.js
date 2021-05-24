@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import * as labi from '../../utils/Constants/EnglishLabels'
 import InputElement from '../../UI/Input/Input'
-import classes from './plasmaDonarsForm.module.css'
+import classes from './oxygenDealersForm.module.css'
 import  {validator} from '../../utils/Validator/Validator'
 import Button from '../../UI/Button/Button'
 import * as orgAction from '../../store/actions/index'
@@ -14,7 +14,6 @@ import * as placeData  from '../../utils/updateData/stateDistrictModel'
 class OxygenDealerRegForm extends Component{
 
 state = {
-    
     userDetailForm:{
         dealerName:{
             elementType:'input',
@@ -66,38 +65,22 @@ state = {
             isValid:true,
             touched:false
         },
-        oxygenConcentrators:{
-            elementType: 'input',
-            value: '',
-            labelValue:labi.OXYGEN_CONCENTRATOR,
+        oxygen_capacity:{
+            elementType:'input',
+            value:'',
+            labelValue:labi.AGE,
             colSize:'col-md-6',
-            elementConfig: {
-                plceholder:'Oxygen Concentrator Number'
+            elementConfig:{
+                placeholder:'Capacity'
             },
-            touched:false,
-            isValid:false,
-            validation:{
-                required:true,
-                    pattern:'^(0|[1-9][0-9]*)$',
-
-            }    
+            validation: {
+                pattern:'^(0|[1-9][0-9]*)$',
+                maxLength:2,
+                minLength:2
+            },
+            isValid:true,
+            touched:false
         },
-        // postiveTestedDate:{
-        //     elementType: 'date',
-        //     value: '',
-        //     labelValue:labi.TEST_POS_DATE,
-        //     colSize:'col-md-6',
-        //     elementConfig: {
-        //     options: [{ value: 'e', displayName: 'e' }]
-        //     },
-        //     touched:false,
-        //     isValid:false,
-        //     validation:{
-        //         required:true,
-        //         isDate:true
-        //     }   
-        // },
-
         state:{
             elementType: 'select',
             value: '',
@@ -176,21 +159,7 @@ state = {
                 required:true
             }
         },
-        // isDonatedPrevious:{
-        //     elementType: 'select',
-        //     value: '',
-        //     labelValue:labi.DONATED_PREVIOUS,
-        //     colSize:'col-md-6',
-        //     elementConfig: {
-        //     options: [{ value: '', displayName: '-' },
-        //              { value : 1, displayName: 'No'},
-        //              { value: 0, displayName: 'Yes' }   
-        //             ]
-        //     },
-        //     touched:false,
-        //     isValid:true,
-        //     validation:{}
-        // },
+        
         
     },
     isTermCondition : false,
@@ -200,9 +169,9 @@ state = {
 componentDidMount() {
 
     const supForm = {...this.state.userDetailForm};   
-    //const bgDetails = {...supForm.bloodGroup};
-    //bgDetails.elementConfig.options=BloodGroup.BLOOD_GROUP_COMBO;
-    //supForm.bloodGroup = bgDetails;
+    // const bgDetails = {...supForm.bloodGroup};
+    // bgDetails.elementConfig.options=BloodGroup.BLOOD_GROUP_COMBO;
+    // supForm.bloodGroup = bgDetails;
     const stateDetails = {...supForm.state}
     const elementConfig  = {...stateDetails.elementConfig}
     elementConfig.options = placeData.getCountryStateData();
@@ -264,14 +233,14 @@ openTNCModel = (event) =>{
         }
     })
 }
-closeInfoModal = () =>{
-    this.props.closeInfoModal();
+closeOxygenInfoModal = () =>{
+    this.props.closeOxygenInfoModal();
 }
 
 submitIntialDetailsHandler = (event) =>{
     event.preventDefault();
     const details = this.mappingData(this.state.userDetailForm);
-    this.props.onSubmitDonarsDetails(details);
+    this.props.onSubmitDealerDetails(details);
 }
 mappingData = (data) =>{
     const details = {};
@@ -307,7 +276,7 @@ render() {
             <Model show={this.props.infoModel} giveFormHeight={false} >
                 <p>{this.props.infoMessage}</p>
                 <div className={classes.ButtonClass}>
-                    <Button btnType="btn btn-primary" clicked={this.closeInfoModal} > Ok</Button>
+                    <Button btnType="btn btn-primary" clicked={this.closeOxygenInfoModal} > Ok</Button>
                 </div>
             </Model>
             <Model show={this.state.doOpenTNCModel} giveFormHeight={false} >
@@ -316,7 +285,7 @@ render() {
                     <Button btnType="btn btn-primary" clicked={this.openTNCModel} > Ok</Button>
                 </div>
             </Model>
-        <div className={classes.headerClass}><strong> {labi.PlASMA_DONAR_HEADER} </strong> </div>
+        <div className={classes.headerClass}><strong> {labi.OXYGEN_DEALER_HEADER} </strong> </div>
         <form >  
             <div className="form-row">
                 {formDetails}
@@ -347,16 +316,16 @@ render() {
 
 const mapStatesToProps  = (state) =>{
     return{
-        loading:state.oxygenDealerReducer.loading,
-        infoModel:state.oxygenDealerReducer.infoModel,
-        infoMessage:state.oxygenDealerReducer.infoMessage
+        loading:state.oxygenDetailReducer.loading,
+        infoModel:state.oxygenDetailReducer.infoModel,
+        infoMessage:state.oxygenDetailReducer.infoMessage
     }
 }
 const mapDispatchToProps = (dispatch) =>{
     return {
-        onSubmitDonarsDetails : (details) => dispatch(orgAction.initSaveOxygenDealer(details)),
-        getAllDonarDetails : () => dispatch( orgAction.fetchDealerData({})),
-        closeInfoModal : () => dispatch( orgAction.closeInfoModal())
+        onSubmitDealerDetails : (details) => dispatch(orgAction.initSaveOxygenDealer(details)),
+        getAllDealerDetails : () => dispatch( orgAction.fetchDealerData({})),
+        closeOxygenInfoModal : () => dispatch( orgAction.closeOxygenInfoModal())
     }
 }
 

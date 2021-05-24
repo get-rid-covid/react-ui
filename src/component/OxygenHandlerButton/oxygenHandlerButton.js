@@ -1,12 +1,12 @@
 import Button from '../../UI/Button/Button'
-import classes from './HandlerButton.module.css'
-import OxygenFilter from '../OxygenFilter/OxygenFilter'
+import classes from './OxygenHandlerButton.module.css'
+import PlasmaFilter from '../PlasmaFilter/PlasmaFilter'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 import * as labi from '../../utils/Constants/EnglishLabels'
 
-const openOxygenModals = (props) =>{
+const  OxygenHandlerButton = (props) =>{
     return(
-        <div className={classes.OpenOxygenModal}>
+        <div className={classes.OpenPlasmaModal}>
             {/* <div className="row">
                 <div className="col-md-4 col-sm-6 col-xs-6 col-4">
                     <Button btnType="btn btn-info" clicked={props.clickDonar}>Donar Registeration</Button>
@@ -20,8 +20,8 @@ const openOxygenModals = (props) =>{
             </div> */}
             <div className="btn-group" data-toggle="button" role="group" aria-label="Basic example">
                 <button type="button" onClick={props.clickDealer} className="btn btn-dark" >Add Dealer</button>
-                <button type="button" onClick={props.clickRequest} className="btn btn-secondary">Raise Request</button>
-                <button type="button" onClick={props.clickDeactivate} className="btn btn-dark" >Delete Record</button>
+                <button type="button"  onClick={props.clickRequest} className="btn btn-secondary">Raise Request</button>
+                <button type="button"  onClick={props.clickDeactivate} className="btn btn-dark" >Delete Record</button>
             </div>
             {/* <div className={classes.filterClass} >
                 <div className={classes.headerClass}>
@@ -45,4 +45,5 @@ const openOxygenModals = (props) =>{
 
     )
 }
-export default openOxygenModals;
+
+export default OxygenHandlerButton;

@@ -5,20 +5,14 @@ export {initSavePlasmaDonar,fetchDonarData,
     onCloseDonarForm,
     closeInfoModal,
     onClickFilter,
-    onCloseFilter} from './plasmaDonarsActions';
-    export {initSaveOxygenDealer,fetchDealerData,
-        onClickDealerForm,
-        onCloseDealerForm,
-        closeInfoModal,
-        onClickFilter,
-        onCloseFilter} from './oxygenContainerActions';
-
-
+    onCloseFilter} from './plasmaDonarsActions'
 
 export {initSavePlasmaRequest,fetchPlasmaReq,onClickReqForm,onCloseReqForm,closeReqInfoModal} from './plasmaRequestAction'
 
 export {initFeedBackSave,onClickCloseFeedBack,
     initDeactivateRecord
     ,onClickCloseDeactivate,
-    onClickDeactivateForm,onCloseDeactivateForm} from './feedbackRequest'
+    onClickDeactivateForm,onCloseDeactivateForm,onClickOxygenDeactivateForm,onCloseOxygenDeactivateForm} from './feedbackRequest'
   
+export {onClickDealerForm,initSaveOxygenDealer,onCloseDealerForm,fetchDealerData,onClickOxygenFilter,onCloseOxygenFilter,closeOxygenInfoModal} from './oxygenDealerActions';
+export {onClickOxygenReqForm,initSaveOxygenRequest,onCloseOxygenReqForm,fetchOxygenReq} from './oxygenRequestActions';
