@@ -68,7 +68,7 @@ state = {
         oxygen_capacity:{
             elementType:'input',
             value:'',
-            labelValue:labi.AGE,
+            labelValue:labi.OXYGEN_CAPACITY,
             colSize:'col-md-6',
             elementConfig:{
                 placeholder:'Capacity'

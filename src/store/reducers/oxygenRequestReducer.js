@@ -41,9 +41,10 @@ const onOpenForm = (state,action) =>{
     return updateState(state,{isModelOpen:true,infoModel:true,infoMessage:`${action.phoneNumber} ${labi.PHONE_NUMBER_EXITS_MESSAGE}`})
  }
  const onCloseForm = (state,action) =>{
-   return updateState(state,{loading:false,error:null,isModelOpen:false});
+   return updateState(state,{loading:false,error:null,isModelOpen:false,infoModel:false});
   }
 const reducer = (state=initialState,action) =>{
+   
     switch(action.type){
         case actionType.ON_CLICK_OXYGEN_REQUESTER_MODAL : return onOpenForm(state,action);
         case actionType.START_SAVE_OXYGEN_REQ: return startSavingOxygenReq(state,action);

@@ -59,3 +59,5 @@ export const SUCCESS_MSG = 'Data successfully saved and thank you for your suppo
 export const SUCCESS_MSG_REQ = 'Data successfully saved.'
 export const SUCCESS_MSG_DEACTIVATE = 'You request has been successfully recieved. We will soon deactivate your record.'
 export const DEACTIVATE_TITLE ='Deactivate Request'
+export const OXYGEN_CAPACITY="Oxygen capacity"
+export const OXYGEN_QUANTITY="Oxygen quantity"

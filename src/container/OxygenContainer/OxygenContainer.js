@@ -109,7 +109,7 @@ class OxygenContainer extends Component {
                     {popupForm}
                     </div>
                 </Modal>
-            <h1>Hello Oxygen</h1>
+            
             <OxygenHandlerButton clickDealer={this.openDealerPopup} clickRequest={this.openRequestPopup} clickDeactivate={this.openDeactivatePopup} />
             <div className={classes.toggleClass}>
                     <div className={["btn-group", classes.externaBtnClass].join(' ')} data-toggle="button" role="group" aria-label="Basic example">

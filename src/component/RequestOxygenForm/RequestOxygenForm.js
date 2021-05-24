@@ -82,14 +82,14 @@ state = {
         oxygenQuantity:{
             elementType:'input',
             value:'',
-            labelValue:labi.AGE,
+            labelValue:labi.OXYGEN_QUANTITY,
             colSize:'col-md-6',
             elementConfig:{
                 placeholder:'Oxygen Quantity'
             },
             validation: {
                 pattern:'^(0|[1-9][0-9]*)$',
-                maxLength:2,
+                maxLength:3,
                 minLength:2
             },
             isValid:true,
