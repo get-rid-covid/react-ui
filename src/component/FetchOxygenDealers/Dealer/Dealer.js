@@ -8,7 +8,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
 
 const Dealer = (props) =>{
 const details = (<div className={classes.InnerData}>
-                  <div><strong>{labi.NAME}:</strong> {props.details.donarName}</div> 
+                  <div><strong>{labi.NAME}:</strong> {props.details.dealerName}</div> 
                   
                   <div><strong>{labi.STATE_NAME}:</strong> {props.details.state}</div>
                   <div><strong>{labi.DISTRICTS}:</strong> {props.details.districts}</div>

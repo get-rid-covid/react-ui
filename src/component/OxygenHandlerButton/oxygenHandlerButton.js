@@ -1,5 +1,5 @@
 import Button from '../../UI/Button/Button'
-import classes from './OxygenHandlerButton.module.css'
+import classes from './oxygenHandlerButton.module.css'
 import PlasmaFilter from '../PlasmaFilter/PlasmaFilter'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 import * as labi from '../../utils/Constants/EnglishLabels'
