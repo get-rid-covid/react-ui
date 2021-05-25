@@ -5,6 +5,7 @@ import {Route,Switch} from 'react-router-dom'
 import HomeBuilder from './container/HomeContainer/HomeBuilder'
 import PlanBuilder from './container/PlanContainer/PlanBuilder'
 import CovidBedsContainer from './container/CovidBedsContainer/CovidBedsContainer'
+import OxygenContainer from './container/OxygenContainer/OxygenContainer'
 import * as linkLabel from './utils/Constants/routeLinks'
 import Volunteer from './container/VoluteerContainer/volunteerBuilder'
 import FoodContainer from './container/FoodContainer/foodContainer'
@@ -19,6 +20,7 @@ class App extends Component {
         <Route path={linkLabel.COVIDBEDS} exact component={CovidBedsContainer}/>
         <Route path={linkLabel.FOODSSOURCE} exact component={FoodContainer}/>
         <Route path={linkLabel.HOME_LINK} exact component={HomeBuilder}/>
+        <Route path={linkLabel.OXYGEN} exact component={OxygenContainer}/>
         <Route path={linkLabel.MAIN_PAGE} exact component={MainContainer}/>
       </Switch>
     )

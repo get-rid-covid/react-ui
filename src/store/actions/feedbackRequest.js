@@ -96,4 +96,17 @@ export const onDeactivate = () =>{
  
     }
 }
+export const onClickOxygenDeactivateForm = () =>{
+    return{
+     type:actionTypes.ON_CLICK_OXYGEN_DEACTIVATE_MODAL
+ 
+    }
+}
+
+export const onCloseOxygenDeactivateForm = () =>{
+return{
+ type:actionTypes.ON_CLOSE_OXYGEN_DEACTIVATE_MODAL
+
+}
+}
 

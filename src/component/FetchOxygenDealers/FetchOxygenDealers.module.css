@@ -1,0 +1,15 @@
+
+
+.FetchPlasmaDonars{
+    margin:15px;
+    box-sizing: border-box;
+    padding:30px;
+    box-shadow: 0px 2px 3px #ccc;
+ 
+    width:70%
+}
+
+.topClass{
+    text-align: center;
+    align-items: center; 
+}

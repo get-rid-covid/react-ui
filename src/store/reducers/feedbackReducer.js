@@ -47,7 +47,6 @@ const onSuccessSaveFeedback = (state,action) =>{
    }
    
 
-
 const reducer = (state=initialState,action) =>{
     switch(action.type){
         case actionType.START_FEEDBACK: return startSavingFeedBack(state,action)
@@ -60,6 +59,8 @@ const reducer = (state=initialState,action) =>{
         case actionType.ON_CLOSE_SUCCESS_DEACTIVATE : return onCloseDeactivate(state,action);
         case actionType.ON_CLICK_DEACTIVATE_MODAL : return modalOpen(state,action);
         case actionType.ON_CLOSE_DEACTIVATE_MODAL : return modalClose(state,action);
+        case actionType.ON_CLICK_OXYGEN_DEACTIVATE_MODAL : return modalOpen(state,action);
+        case actionType.ON_CLOSE_OXYGEN_DEACTIVATE_MODAL : return modalClose(state,action);
         default : return state;
     }
 

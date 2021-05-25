@@ -11,6 +11,7 @@ export const ADDRESS = 'Address';
 export const PINCODE = 'PinCode';
 export const EMAIL = 'Email';
 export const PLASMA_HOME = 'Blood Plasma';
+export const OXYGEN="Oxygen Home";
 
 export const BLOOD_GROUP = 'Blood Group'
 export const TEST_POS_DATE ='Tested Positive On'
@@ -39,10 +40,16 @@ export const FROM_DATE = 'From Date';
 export const TO_DATE = 'To Date';
 
 export const PlASMA_DONAR_HEADER = 'Plasma Donor Registration'
+
 export const REQUEST_PLASMA_HEADER = 'Request for blood plasma'
 export const Covid_BEDS_ENTRY = 'Register Covid Beds'
 
 export const Covid_BEDS_REQ = 'Request Covid Beds'
+
+
+export const OXYGEN_DEALER_HEADER="Oxygen Dealer Registration";
+export const REQUEST_PLASMA_HEADER = 'Request for blood plasma';
+export const REQUEST_OXYGEN_HEADER = 'Request for Oxygen'
 
 
 export const PAT_NAME = 'Patient Name';
@@ -60,6 +67,7 @@ export const SUCCESS_MSG = 'Data successfully saved and thank you for your suppo
 export const SUCCESS_MSG_REQ = 'Data successfully saved.'
 export const SUCCESS_MSG_DEACTIVATE = 'You request has been successfully recieved. We will soon deactivate your record.'
 export const DEACTIVATE_TITLE ='Deactivate Request'
+
 
 export const VOLUNTEER = 'Volunteers';
 export const PASSWORD = 'Password'
@@ -89,3 +97,7 @@ export const FOOD_DONORS = 'Food Donors'
 export const IS_COVID = 'Are you a covid Patient'
 
 export const meals_required = 'Meal Timing';
+
+export const OXYGEN_CAPACITY="Oxygen capacity"
+export const OXYGEN_QUANTITY="Oxygen quantity"
+
