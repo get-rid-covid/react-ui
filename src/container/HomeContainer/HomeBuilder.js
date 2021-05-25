@@ -9,6 +9,7 @@ import PlasmaDonarsRegForm from '../../component/plasmaDonarsForm/plasmaDonarsFo
 import PlasmaReqForm from '../../component/RequestPlasmaForm/RequestPlasmaForm'
 import DeactivatForm from '../../component/DeactivateRecord/deactivateRecord'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+import * as labi from '../../utils/Constants/EnglishLabels'
 import classes from './HomeBuilder.module.css'
 import * as orgAction from '../../store/actions/index'
 import {connect} from 'react-redux'
@@ -108,7 +109,10 @@ class HomeBuilder extends Component{
                     </div>
                 </Modal>
                  <Quotes/> 
-                <PlasmaHandlerButton clickDonar={this.openDonarPopup} clickRequest={this.openRequestPopup} clickDeactivate={this.openDeactivatePopup}/>
+                <PlasmaHandlerButton 
+                    firstClick={this.openDonarPopup} firstLabel={labi.ADD_DONOR} 
+                    secondClick={this.openRequestPopup} secondLabel={labi.RAISE_REQUEST}
+                    thirdClick={this.openDeactivatePopup} thirdLabel={labi.DELETE_RECORD}/>
                 <div className={classes.toggleClass}>
                     <div className={["btn-group", classes.externaBtnClass].join(' ')} data-toggle="button" role="group" aria-label="Basic example">
                     <button type="button"  className={this.state.isDonar ? "btn btn-primary" : "btn btn-secondary"} onClick={this.toggleDonarHandler} > Donors</button>

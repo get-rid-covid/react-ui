@@ -1,0 +1,53 @@
+.Donar{
+        box-shadow : 0px 2px 3px #ccc;
+        box-sizing: border-box;
+        padding : 10px;
+        margin : 10px auto; 
+        border : 1px solid #ccc;
+        max-width:400px;
+        min-width:400px;
+    }
+    
+    .InnerData div{
+        margin: 8px;
+        border:0.5px;
+        
+        padding: 4px; 
+        border-radius:0.5em;
+        
+    }
+    .messageSector{
+        display: inline-block;    
+    }
+    
+    .availClass{
+        padding:3px;
+        margin:2px;
+        border: 1px solid black;
+        display: inline;
+        background-color: coral;
+        border: 1px solid black;
+    }
+    .parentAvailClass{
+        margin: 0px !important;
+        padding: 0px !important;
+      
+    }
+
+    .PhoneNumber{
+        background-color: #0073e6;
+        width:max-content !important;
+    }
+    
+    .PhoneNumber a{
+    color: white;
+    }
+    
+    .Whatsapp{
+        background-color: #28a745;    
+        width:max-content !important;
+    }
+    
+    .Whatsapp a{
+        color: white;
+        }

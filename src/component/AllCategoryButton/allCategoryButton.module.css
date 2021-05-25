@@ -1,0 +1,15 @@
+.allCategoryButton{
+    margin:10px 0px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+ 
+.grpBtn .iBtn{
+    border:0.2px solid rgb(100, 100, 100) !important;
+}
+
+.grpBtn .iBtn:not(:last-child) {
+    border-right: none; 
+} 

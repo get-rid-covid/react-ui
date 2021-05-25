@@ -12,11 +12,10 @@ class UserForm extends Component{
 
 state = {
     suppliers : [
-        'Beds',
-        'Oxygen Supply',
-        'Online Doctors',
-        'Nurses',
-        'Home Isolation Setup'
+        'Ventilator-beds',
+        'Oxygen-beds ',
+        'ICU-beds',
+        'Only-beds'
     ],
     userDetailForm:{
         organisation_name:{
@@ -182,7 +181,7 @@ componentDidMount() {
                 value: '',
                 labelValue:element,
                 id:element,
-                colSize:'col-md-6 col-xs-6 col-sm-6',
+                colSize:'col-md-6 col-xs-6 col-sm-6 col-6',
                 touched:false,
                 isValid:true,
                 validation:{}
@@ -192,7 +191,7 @@ componentDidMount() {
                 value: '',
                 id: element+'_stock',
                 labelValue:labi.STOCK,
-                colSize:'col-md-6 col-xs-6 col-sm-6',
+                colSize:'col-md-6 col-xs-6 col-sm-6 col-6',
                 touched:false,
                 isValid:true,
                 validation:{}
@@ -258,7 +257,8 @@ changeHandler = (event,updatedKey) =>{
 submitIntialDetailsHandler = (event) =>{
     event.preventDefault();
     const details = this.mappingData(this.state.userDetailForm);
-    this.props.onSubmitOrgDetails(details);
+    
+    //  this.props.onSubmitOrgDetails(details);
 }
 mappingData = (data) =>{
     const details = {};
