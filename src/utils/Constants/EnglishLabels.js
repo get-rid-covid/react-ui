@@ -48,7 +48,6 @@ export const Covid_BEDS_REQ = 'Request Covid Beds'
 
 
 export const OXYGEN_DEALER_HEADER="Oxygen Dealer Registration";
-export const REQUEST_PLASMA_HEADER = 'Request for blood plasma';
 export const REQUEST_OXYGEN_HEADER = 'Request for Oxygen'
 
 
