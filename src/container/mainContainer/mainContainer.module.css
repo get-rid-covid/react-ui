@@ -1,0 +1,17 @@
+.btnClass{
+    text-align: center;
+    
+}
+
+.btnClass button{
+    width: 150px;
+    height: 50px;
+    background-color: #ffed6f;
+    color: #c30000;
+    font-weight: bold;
+
+}
+
+.rowClass{
+    margin: 51px 0px;
+}

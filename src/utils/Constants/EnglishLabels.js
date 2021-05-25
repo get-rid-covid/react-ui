@@ -40,9 +40,17 @@ export const FROM_DATE = 'From Date';
 export const TO_DATE = 'To Date';
 
 export const PlASMA_DONAR_HEADER = 'Plasma Donor Registration'
+
+export const REQUEST_PLASMA_HEADER = 'Request for blood plasma'
+export const Covid_BEDS_ENTRY = 'Register Covid Beds'
+
+export const Covid_BEDS_REQ = 'Request Covid Beds'
+
+
 export const OXYGEN_DEALER_HEADER="Oxygen Dealer Registration";
 export const REQUEST_PLASMA_HEADER = 'Request for blood plasma';
 export const REQUEST_OXYGEN_HEADER = 'Request for Oxygen'
+
 
 export const PAT_NAME = 'Patient Name';
 export const CONT_NAME = 'Contact Person Name'
@@ -51,7 +59,7 @@ export const REASON = 'Reason'
 
 export const PHONE_NUMBER_EXITS_MESSAGE = ' phone number has been already registered. Please raise a request in feedback or register with different number.'
 
-
+export const AVAILABILTY = 'AVAILABILITY'
 
 export const FILTER = 'FILTER'
 
@@ -59,5 +67,37 @@ export const SUCCESS_MSG = 'Data successfully saved and thank you for your suppo
 export const SUCCESS_MSG_REQ = 'Data successfully saved.'
 export const SUCCESS_MSG_DEACTIVATE = 'You request has been successfully recieved. We will soon deactivate your record.'
 export const DEACTIVATE_TITLE ='Deactivate Request'
+
+
+export const VOLUNTEER = 'Volunteers';
+export const PASSWORD = 'Password'
+export const AUTHENTICATION = 'Authentication'
+
+export const COVID_BEDS = 'Covid-Beds'
+
+export const Ventialtor_BEDS = 'Ventialtor-Beds'
+export const OXYGEN_BEDS = 'Oxygen-Beds'
+export const ICU_BEDS = 'ICU-Beds'
+export const ONLY_BEDS = 'Only-Beds'
+
+export const Quantity = 'Quantity'
+
+export const Covid_BED_TYPE = 'Covid-bed-type'
+
+
+export const ADD_DONOR= 'Add Donor'
+export const RAISE_REQUEST = 'Raise Request'
+export const DELETE_RECORD = 'Delete Record'
+
+export const ADD_BED= 'Register Beds'
+
+export const FOOD = 'Food Source'
+
+export const FOOD_DONORS = 'Food Donors'
+export const IS_COVID = 'Are you a covid Patient'
+
+export const meals_required = 'Meal Timing';
+
 export const OXYGEN_CAPACITY="Oxygen capacity"
 export const OXYGEN_QUANTITY="Oxygen quantity"
+

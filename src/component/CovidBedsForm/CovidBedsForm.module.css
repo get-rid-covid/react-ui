@@ -1,0 +1,16 @@
+.PlasmaDonars{
+    margin:15px 10px;
+    box-sizing: border-box;
+    padding:15px;
+    box-shadow: 0px 2px 3px #ccc;
+}
+
+.headerClass{
+    align-items: center;
+    text-align: center;
+}
+
+.ButtonClass {
+    text-align: center !important;
+}
+

@@ -19,9 +19,9 @@ const openPlasmaModals = (props) =>{
                 </div> 
             </div> */}
             <div className="btn-group" data-toggle="button" role="group" aria-label="Basic example">
-                <button type="button" onClick={props.clickDonar} className="btn btn-dark" >Add Donor</button>
-                <button type="button" onClick={props.clickRequest} className="btn btn-secondary">Raise Request</button>
-                <button type="button" onClick={props.clickDeactivate} className="btn btn-dark" >Delete Record</button>
+                <button type="button" onClick={props.firstClick} className="btn btn-dark" >{props.firstLabel}</button>
+                <button type="button" onClick={props.secondClick} className="btn btn-secondary">{props.secondLabel}</button>
+                <button type="button" onClick={props.thirdClick} className="btn btn-dark" >{props.thirdLabel}</button>
             </div>
             {/* <div className={classes.filterClass} >
                 <div className={classes.headerClass}>

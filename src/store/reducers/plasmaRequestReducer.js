@@ -10,6 +10,7 @@ const initialState = {
     error:null,
     infoModel:false,
     infoMessage:null,
+    isFilter:false,
     phoneNumber:null
 }
 

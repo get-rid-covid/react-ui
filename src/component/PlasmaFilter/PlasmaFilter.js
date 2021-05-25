@@ -14,7 +14,7 @@ import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 class PlasmaFilter extends Component{
     state={
         filterForm:{
-            
+                 
             bloodGroup:{
                 elementType: 'select',
                 value: '',

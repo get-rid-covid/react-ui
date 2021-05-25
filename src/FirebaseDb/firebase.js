@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore'
+import 'firebase/auth'
 
 const firebaseConfig = {
     apiKey: "AIzaSyDmSj6oBnlAXzSDyruYZOXqCXx2daIwM0E",
@@ -12,6 +13,7 @@ const firebaseConfig = {
   };
 
   firebase.initializeApp(firebaseConfig);
+  firebase.auth();
   export const db = firebase.firestore();
   export const orgCollection = db.collection('organisationList');
   export const plasmaDonarCollection =db.collection('plasmaDonarsList');
@@ -20,9 +22,12 @@ const firebaseConfig = {
   export const oxygenRequestCollection =db.collection('oxygenRequesterList')
   export const feedbackCollections =db.collection('feedbacks');
   export const deactivateCollections =db.collection('deactivedRequests');
-
-
- export const createdTime = firebase.firestore.FieldValue.serverTimestamp;
+  export const volunteersCollections = db.collection('volunteersList')
+  export const covidBedCollections = db.collection('covidBedList');
+  export const covidBedReqCollections = db.collection('covidBedRequestList');
+  export const foodDonateCollections = db.collection('foodDonateList');
+  export const foodReqCollections = db.collection('foodRequestList');
+export const createdTime = firebase.firestore.FieldValue.serverTimestamp;
 
 export const convertFirebaseTime = (date) =>{
   return firebase.firestore.Timestamp.fromDate(date);
