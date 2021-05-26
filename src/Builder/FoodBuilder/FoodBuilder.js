@@ -45,7 +45,7 @@ class FoodBuilder extends Component{
         }
         return(
             <div>
-        <Modal giveFormHeight={this.state.modalHeight} show={this.props.modalStatus}>
+        <Modal giveFormHeight={this.state.modalHeight} show={this.props.modalStatus && popupForm !=null}>
            {popupForm}
         </Modal>
             <div className={classes.toggleClass}>

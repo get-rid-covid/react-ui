@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
 import classes from './mainContainer.module.css'
 import * as navi from '../../utils/Constants/routeLinks'
+import Disclaimers from '../../Builder/MainPageBuilder/mainPageBuilder'
 class mainPage extends Component{
 
     covidBedHandler = ()=>{
@@ -16,7 +17,7 @@ class mainPage extends Component{
         this.props.history.push(navi.FOODSSOURCE);
     }
     oxygenHandler = ()=>{
-        this.props.history.push(navi.HOME_LINK);
+        this.props.history.push(navi.OXYGEN);
     }
     render(){
         const btnClass = [classes.btnClass,"col-md-6 col-6 col-sm-6 col-xs-6"].join(' ');
@@ -25,7 +26,7 @@ class mainPage extends Component{
            <div className="container">
                <div className={rowClass}>
                    <div className={btnClass} >
-                       <button onClick={this.covidBedHandler}><FontAwesomeIcon icon={faPumpMedical} /> Oxygen</button>
+                       <button onClick={this.oxygenHandler}><FontAwesomeIcon icon={faPumpMedical} /> Oxygen</button>
                    </div>
                    <div className={btnClass} >
                        <button onClick={this.covidBedHandler}> <FontAwesomeIcon icon={faBed} />Covid Beds</button>
@@ -47,8 +48,10 @@ class mainPage extends Component{
                        <button> <FontAwesomeIcon icon={faBed} />Covid Beds</button>
                    </div>
                </div> */}
-
+    <Disclaimers/>
            </div>
+        
+
         )
     }
 }

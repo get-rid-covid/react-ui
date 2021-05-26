@@ -27,6 +27,8 @@ export const initCovidBedSave = (details)=>{
                         dispatch(onSaveCovidBeds(snapshot.id))
                         dispatch(orgAction.onCloseModal())
                         dispatch(fetchCovidBeds({}));
+                        const message = 'Record successfully saved.'
+                        dispatch(orgAction.onClickInfoModal(message))
                     }).catch(error =>{
                         dispatch(errorSaveCovidBeds(error))
                     }) 
@@ -147,12 +149,15 @@ export const initCovidRequests = (details)=>{
                         dispatch(onSaveCovidBedsReq(snapshot.id))
                         dispatch(fetchCovidBedsReq({}));
                         dispatch(orgAction.onCloseModal())
+                        const message = 'Record successfully saved.'
+                        dispatch(orgAction.onClickInfoModal(message))
                     }).catch(error =>{
                         dispatch(errorSaveCovidBedsReq(error))
                     }) 
             }
             else{
-                dispatch(phoneNumExits(dett[0].phoneNumber))
+                const message = 'Already a records exists with ' +dett[0].phoneNumber +'. Change phone number and register'
+                dispatch(orgAction.onClickInfoModal(message))
             }   
         }).catch(err =>{
             dispatch(errorSaveCovidBedReq(err))
