@@ -92,11 +92,13 @@ export const ADD_BED= 'Register Beds'
 
 export const FOOD = 'Food Source'
 
-export const FOOD_DONORS = 'Food Donors'
+export const FOOD_DONORS = 'Food-Donors'
 export const IS_COVID = 'Are you a covid Patient'
 
 export const meals_required = 'Meal Timing';
 
 export const OXYGEN_CAPACITY="Oxygen capacity"
 export const OXYGEN_QUANTITY="Oxygen quantity"
+
+
 

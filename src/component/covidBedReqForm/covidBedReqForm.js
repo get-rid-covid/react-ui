@@ -21,7 +21,7 @@ state = {
         orgName:{
             elementType:'input',
             value:'',
-            labelValue:labi.NAME,
+            labelValue:labi.PAT_NAME,
             colSize:'col-md-12',
             elementConfig:{
                 placeholder:'Full Name'
@@ -46,7 +46,22 @@ state = {
             isValid:true,
             touched:false
         },
-        
+        age:{
+            elementType:'input',
+            value:'',
+            labelValue:labi.AGE,
+            colSize:'col-md-6',
+            elementConfig:{
+                placeholder:'Age'
+            },
+            validation: {
+                pattern:'^(0|[1-9][0-9]*)$',
+                maxLength:2,
+                minLength:2
+            },
+            isValid:true,
+            touched:false
+        },
         phoneNumber:{
             elementType:'input',
             value:'',

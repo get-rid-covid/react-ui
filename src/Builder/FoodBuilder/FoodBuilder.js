@@ -50,7 +50,7 @@ class FoodBuilder extends Component{
         </Modal>
             <div className={classes.toggleClass}>
                     <div className={["btn-group", classes.externaBtnClass].join(' ')} data-toggle="button" role="group" aria-label="Basic example">
-                    <button type="button"  className={this.state.isDonar ? "btn btn-primary" : "btn btn-secondary"} onClick={this.toggleDonarHandler} > Covid-beds</button>
+                    <button type="button"  className={this.state.isDonar ? "btn btn-primary" : "btn btn-secondary"} onClick={this.toggleDonarHandler} > Food-Donors</button>
                     <button type="button" className={this.state.isDonar ? "btn btn-secondary" : "btn btn-primary"} onClick={this.toggleDonarHandler}>Requests</button>
                     </div>
                     <div className={classes.filterClass}>

@@ -49,38 +49,38 @@ state = {
             isValid:false,
             touched:false
         },
-        age:{
-            elementType:'input',
-            value:'',
-            labelValue:labi.AGE,
-            colSize:'col-md-6',
-            elementConfig:{
-                placeholder:'Age'
-            },
-            validation: {
-                pattern:'^(0|[1-9][0-9]*)$',
-                maxLength:2,
-                minLength:2
-            },
-            isValid:true,
-            touched:false
-        },
-        oxygen_capacity:{
-            elementType:'input',
-            value:'',
-            labelValue:labi.OXYGEN_CAPACITY,
-            colSize:'col-md-6',
-            elementConfig:{
-                placeholder:'Capacity'
-            },
-            validation: {
-                pattern:'^(0|[1-9][0-9]*)$',
-                maxLength:2,
-                minLength:2
-            },
-            isValid:true,
-            touched:false
-        },
+        // age:{
+        //     elementType:'input',
+        //     value:'',
+        //     labelValue:labi.AGE,
+        //     colSize:'col-md-6',
+        //     elementConfig:{
+        //         placeholder:'Age'
+        //     },
+        //     validation: {
+        //         pattern:'^(0|[1-9][0-9]*)$',
+        //         maxLength:2,
+        //         minLength:2
+        //     },
+        //     isValid:true,
+        //     touched:false
+        // },
+        // oxygen_capacity:{
+        //     elementType:'input',
+        //     value:'',
+        //     labelValue:labi.OXYGEN_CAPACITY,
+        //     colSize:'col-md-6',
+        //     elementConfig:{
+        //         placeholder:'Capacity'
+        //     },
+        //     validation: {
+        //         pattern:'^(0|[1-9][0-9]*)$',
+        //         maxLength:2,
+        //         minLength:2
+        //     },
+        //     isValid:true,
+        //     touched:false
+        // },
         state:{
             elementType: 'select',
             value: '',

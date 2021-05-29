@@ -79,22 +79,21 @@ state = {
             isValid:true,
             touched:false
         },
-        oxygenQuantity:{
-            elementType:'input',
-            value:'',
-            labelValue:labi.OXYGEN_QUANTITY,
-            colSize:'col-md-6',
-            elementConfig:{
-                placeholder:'Oxygen Quantity'
-            },
-            validation: {
-                pattern:'^(0|[1-9][0-9]*)$',
-                maxLength:3,
-                minLength:2
-            },
-            isValid:true,
-            touched:false
-        },
+        // oxygenQuantity:{
+        //     elementType:'input',
+        //     value:'',
+        //     labelValue:labi.OXYGEN_QUANTITY,
+        //     colSize:'col-md-6',
+        //     elementConfig:{
+        //         placeholder:'Oxygen Quantity'
+        //     },
+        //     validation: {
+        //         pattern:'^(0|[1-9][0-9]*)$'
+                
+        //     },
+        //     isValid:true,
+        //     touched:false
+        // },
         
 
         state:{

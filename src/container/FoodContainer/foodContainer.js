@@ -73,7 +73,7 @@ class FoodContainer extends Component{
         </Modal> 
         
          <HandlerButton 
-            firstClick={this.openRegisterPopup} firstLabel={labi.ADD_BED} 
+            firstClick={this.openRegisterPopup} firstLabel={labi.ADD_DONOR} 
             secondClick={this.openRequestPopup} secondLabel={labi.RAISE_REQUEST}
             thirdClick={this.openDeactivatePopup} thirdLabel={labi.DELETE_RECORD}/> 
         <FoodBuilder/>
