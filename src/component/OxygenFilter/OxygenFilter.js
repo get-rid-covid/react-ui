@@ -129,7 +129,7 @@ class OxygenFilter extends Component{
                 else{
                     this.props.onSubmitOxygenReq(data);
                 }
-                this.props.onCloseFilter();
+                this.props.onCloseOxygenFilter();
            }
         mappingData = (data) =>{
             const details = {};
@@ -201,7 +201,7 @@ class OxygenFilter extends Component{
 const mapStatesToProps  = (state) =>{
     return{
         loading:state.oxygenDetailReducer.loading,
-        donarList:state.oxygenDetailReducer.dealerList
+        dealerList:state.oxygenDetailReducer.dealerList
     }
 }
 const mapDispatchToProps = (dispatch) =>{
