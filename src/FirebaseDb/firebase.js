@@ -3,7 +3,7 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDmSj6oBnlAXzSDyruYZOXqCXx2daIwM0E",
+    apiKey: "",
     authDomain: "get-rid-covid-v1.firebaseapp.com",
     projectId: "get-rid-covid-v1",
     storageBucket: "get-rid-covid-v1.appspot.com",
